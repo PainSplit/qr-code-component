@@ -18,7 +18,7 @@ class App {
 
     const attribution = {
       name: 'Rizky Ardiansyah',
-      href: 'https://github.com/ChillingWater',
+      href: 'https://github.com/PainSplit',
     };
 
     const qrCodeElement = createQRCode('/assets/images/image-qr-code.png');
