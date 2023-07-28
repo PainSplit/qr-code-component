@@ -1,0 +1,145 @@
+@font-face {
+  font-family: 'Outfit';
+  src: url('/assets/fonts/Outfit-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('/assets/fonts/Outfit-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+:root {
+  --color-00: #ffffff;
+  --color-01: #d6e2f0;
+  --color-02: #7b879d;
+  --color-03: #1f3251;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+}
+
+html {
+  color-scheme: dark light;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  background-color: var(--color-01);
+  color: var(--color-03);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+#app {
+  width: min(100% - 3rem, 428px);
+  margin: auto;
+  padding: 1rem;
+  border-radius: 1.125rem;
+  background-color: var(--color-00);
+}
+
+.app__image {
+  border-radius: 0.5rem;
+}
+
+.app__description {
+  margin-block: 2rem;
+  text-align: center;
+}
+
+.app__title {
+  margin-block: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+
+.app__message {
+  padding-inline: 1rem;
+  color: var(--color-02);
+}
+
+.app__attribution {
+  display: none;
+}
+
+@media (min-height: 900px) {
+  body:hover>#app>.app__attribution {
+    display: block;
+  }
+
+  #app {
+    position: relative;
+  }
+
+  .app__attribution {
+    position: absolute;
+    bottom: -8rem;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: var(--color-03);
+    color: var(--color-00);
+    animation: bounce 3000ms infinite;
+  }
+
+  .app__attribution>a {
+    color: var(--color-02);
+  }
+
+  .app__attribution>a:hover {
+    text-decoration: underline;
+  }
+
+  @keyframes bounce {
+
+    0%,
+    100% {
+      transform: translateY(-25%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-00: #0a151f;
+    --color-01: #102434;
+    --color-02: #3d7eb8;
+    --color-03: #f7fafc;
+  }
+}
