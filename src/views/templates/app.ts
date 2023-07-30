@@ -21,7 +21,7 @@ class App {
       href: 'https://github.com/PainSplit',
     };
 
-    const qrCodeElement = createQRCode('/assets/images/image-qr-code.png');
+    const qrCodeElement = createQRCode('/qr-code-component/assets/images/image-qr-code.png');
     const descriptionElement = createDescription(description);
     const attributionElement = createAttribution(attribution);
 
